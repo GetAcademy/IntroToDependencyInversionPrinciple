@@ -5,18 +5,22 @@ namespace IntroToDependencyInversionPrinciple.OneOfEach
 {
     internal class OneOfEachService
     {
-        public static Example[] GetIt()
+        private IDataFetcher _dataFetcher;
+
+        public OneOfEachService(IDataFetcher dataFetcher)
         {
-            var baseUrl = "https://api.chucknorris.io/jokes/";
-            var webClient = new WebClient();
-            var categoriesJson = webClient.DownloadString(baseUrl + "categories");
-            var categories = JsonSerializer.Deserialize<string[]>(categoriesJson);
+            _dataFetcher = dataFetcher;
+        }
+
+        public Example[] GetIt()
+        {
+            var categories = _dataFetcher.GetCategories();
             var examples = new List<Example>();
             foreach (var category in categories)
             {
-                var jokeJson = webClient.DownloadString(baseUrl + $"random?category={category}");
-                var joke = JsonSerializer.Deserialize<Joke>(jokeJson);
-                examples.Add(new Example(category, joke.value));
+                var value = _dataFetcher.GetExample(category);
+                var example = new Example(category, value);
+                examples.Add(example);
             }
             return examples.ToArray();
         }

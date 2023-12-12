@@ -4,8 +4,7 @@ using ChatServerUltraBultra;
 using IntroToDependencyInversionPrinciple.Chat;
 using IntroToDependencyInversionPrinciple.OneOfEach;
 
-/*
- * Pause til 10:37
+/* Pause til 11:07
  *
  * 1: Dependency Inversion Principle
  * 2: Skrive om kode som bryter Single Responsibility Principle
@@ -15,23 +14,14 @@ using IntroToDependencyInversionPrinciple.OneOfEach;
  *    Service-klasser
  */
 
-var server = new ChatServer();
+//ChatDemo.Run();
 
-var client1 = new ChatClient("Per", server);
-var client2 = new ChatClient("Pål", server);
-var client3 = new ChatClient("Espen", server);
-
-client1.Say("Hello");
-// Pål og Espen får beskjed "Per sier Hello"
-
-client2.Say("Hello");
-// Per og Espen får beskjed "Pål sier Hello"
-
-client3.Say("Hello");
-// Per og Pål får beskjed "Espen sier Hello"
 
 //var examples = OneOfEachService.GetIt();
-//foreach (var example in examples)
-//{
-//    Console.WriteLine(example.Description);
-//}
+var chuckNorrisApiDataFetcher = new ChuckNorrisApiDataFetcher();
+var service = new OneOfEachService(chuckNorrisApiDataFetcher);
+var examples = service.GetIt();
+foreach (var example in examples)
+{
+    Console.WriteLine(example.Description);
+}
