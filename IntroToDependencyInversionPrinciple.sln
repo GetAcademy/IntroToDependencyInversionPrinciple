@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToDependencyInversionPrinciple", "IntroToDependencyInversionPrinciple\IntroToDependencyInversionPrinciple.csproj", "{D056CD54-11D9-4DCD-9EEB-01E50531B166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServerUltraBultra", "ChatServerUltraBultra\ChatServerUltraBultra.csproj", "{F1AB817E-1B71-4909-AF8C-1368FAB5C2A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D056CD54-11D9-4DCD-9EEB-01E50531B166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D056CD54-11D9-4DCD-9EEB-01E50531B166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D056CD54-11D9-4DCD-9EEB-01E50531B166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D056CD54-11D9-4DCD-9EEB-01E50531B166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1AB817E-1B71-4909-AF8C-1368FAB5C2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AB817E-1B71-4909-AF8C-1368FAB5C2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AB817E-1B71-4909-AF8C-1368FAB5C2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AB817E-1B71-4909-AF8C-1368FAB5C2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4046D034-90EE-43C1-9FA9-98535C748B57}
+	EndGlobalSection
+EndGlobal
