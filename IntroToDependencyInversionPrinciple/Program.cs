@@ -19,7 +19,9 @@ using IntroToDependencyInversionPrinciple.OneOfEach;
 
 //var examples = OneOfEachService.GetIt();
 var chuckNorrisApiDataFetcher = new ChuckNorrisApiDataFetcher();
-var service = new OneOfEachService(chuckNorrisApiDataFetcher);
+var directoryDataFetcher = new DirectoryDataFetcher("C:\\");
+var service = new OneOfEachService(directoryDataFetcher);
+//var service = new OneOfEachService(chuckNorrisApiDataFetcher);
 var examples = service.GetIt();
 foreach (var example in examples)
 {
